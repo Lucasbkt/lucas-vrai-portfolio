@@ -1,0 +1,294 @@
+/* Variables */
+
+:root {
+    --black: #121212;
+    --dark: #1E1E1E;
+    --gray: #2D2D2D;
+    --light: #E0E0E0;
+    --accent: #7A7A7A;
+}
+
+
+/* la police Poppins est utilisée pour le texte normal et Playfair Display pour les titres */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--black);
+    color: var(--light);
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 70px;
+}
+
+
+/* Titres avec la police Playfair Display */
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+
+/* Texte normal avec Poppins */
+
+p,
+span,
+li,
+.subtitle,
+.description,
+.percentage {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+
+/* Navigation */
+
+#main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--dark);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+#main-nav li {
+    margin: 0 15px;
+}
+
+#main-nav a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+
+/* Sections */
+
+.section {
+    padding: 80px 0;
+}
+
+.bg-dark {
+    background: var(--dark);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--accent);
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+
+/* Profil */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gray);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 600px;
+    font-weight: 300;
+}
+
+
+/* Compétences et Langues */
+
+.skills,
+.languages {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.skill,
+.language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--gray);
+}
+
+.percentage {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+
+/* Timeline */
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--gray);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.year {
+    position: absolute;
+    left: -45px;
+    top: 0;
+    background: var(--black);
+    padding: 5px 10px;
+    border: 1px solid var(--gray);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+
+/* Centres d'intérêt */
+
+.hobbies {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hobby {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hobby i {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+
+/* Section Contact */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--gray);
+    border-radius: 6px;
+    color: var(--light);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.contact-item:hover {
+    background: #333;
+}
+
+.contact-item i {
+    font-size: 1.3rem;
+    color: var(--accent);
+    width: 25px;
+    text-align: center;
+}
+
+
+/* Couleurs spécifiques pour certains réseaux */
+
+.contact-item .fa-snapchat {
+    color: #FFFC00;
+}
+
+.contact-item .fa-tiktok {
+    color: #25F4EE;
+}
+
+.contact-item .fa-youtube {
+    color: #FF0000;
+}
+
+.contact-item .fa-whatsapp {
+    color: #00FF00;
+}
+
+.contact-item .fa-github {
+    color: #E6E6FA;
+}
+
+.contact-item .fa-twitter {
+    color: #87CEEB;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    #main-nav li {
+        margin: 5px 10px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
